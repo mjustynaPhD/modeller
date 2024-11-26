@@ -4,12 +4,12 @@ from modeller.automodel import *
 
 env = environ()
 a = automodel(env, alnfile='aligned.ali',
-              knowns='6eqe', sequence='BAB86909.1',
+              knowns='6eqeA', sequence='BAB86909.1',
               assess_methods=(assess.DOPE,
                               #soap_protein_od.Scorer(),
                               assess.GA341))
 a.starting_model = 1
-a.ending_model = 50
+a.ending_model = 5
 a.make()
 
 # Get a list of all successfully built models from a.outputs
